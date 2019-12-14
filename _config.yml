@@ -29,6 +29,7 @@ user_email: "jx_zhang98@qq.com"
 
 # Build settings
 markdown: Redcarpet
+highlighter: pygments
 gems:
   - jekyll-feed
   - jekyll-paginate
