@@ -28,7 +28,7 @@ user: "JX-Zhang"
 user_email: "jx_zhang98@qq.com"
 
 # Build settings
-markdown: kramdown
+markdown: Redcarpet
 gems:
   - jekyll-feed
   - jekyll-paginate
