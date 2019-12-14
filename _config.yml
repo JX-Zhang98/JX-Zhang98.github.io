@@ -16,7 +16,7 @@
 title: JX_Zhang98
 description: > # this means to ignore newlines until "baseurl:"
   Fishtousher!
-baseurl: "/JX-Zhang98"
+baseurl: ""
 url: "https://jx-zhang98.github.io/"
 permalink: /:year/:month/:day/:title
 repository: JX-Zhang98/jx-zhang98.github.io/
