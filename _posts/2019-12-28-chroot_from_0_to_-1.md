@@ -1,11 +1,11 @@
 ---
 layout: post
 title:  "chroot jail break in CTF: from 0 to -1"
-date:   2019-12-28 21:46:31 +0800
+date:   2019-12-28 21:46:31 +0000
 categories: CTF
 tags: sandbox chroot
 ---
-# chroot jail break in CTF: from 0 to -1
+xnuca2019-chroot & thuctf2019-固若金汤
 
 ## What is chroot
 
