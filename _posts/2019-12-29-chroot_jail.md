@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "chroot jail break from 0 to -1"
+title: "chroot jail break in CTF from 0 to -1"
 date: 2019-12-29 19:57:22
 categories: CTF
 tags: chroot sandbox
