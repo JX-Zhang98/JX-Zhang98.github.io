@@ -151,7 +151,7 @@ int main()
 
 理论上按照之前分析，以上代码可以顺利逃逸，实际上直接在本地模拟的jail中执行exploit确能逃逸，读到真实root中的flag，但喂给题目文件通过execveat系统调用没有实现逃逸，暂时没有找到原因。。。
 
-![1p0X8O.jpg](https://s2.ax1x.com/2020/01/18/1p0X8O.jpg)
+![1p0X8O.jpg](https://s2.ax1x.com/2020/01/18/1p0X8O.jpg){:width="100%"}
 
 ### 2 - existing outside fd
 
