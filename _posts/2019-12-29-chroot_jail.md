@@ -50,7 +50,7 @@ bash-5.0-beta         busybox-x86_64        flag                  subdir
 
 在使用```chroot . ./bash```命令新起的bash-5.0中，原系统中```/tmp/jail```目录成为了根目录，其父目录及同级目录都不可见。
 
-![1p0lge.jpg](https://s2.ax1x.com/2020/01/18/1p0lge.jpg)
+![1p0lge.jpg](https://s2.ax1x.com/2020/01/18/1p0lge.jpg){:width="100%"}
 
 ```bash
 //以jail为根目录的shell中没有链接库，bash及其他工具均为静态编译，busybox中包含很多常用工具命令
@@ -118,7 +118,7 @@ chroot()则与chroot命令一样，直接限定了进程的root目录(rootDir)�
 2. 此时进程的CWD并没有发生改变，所以子进程的CWD已经存在于rootDir的目录树之外，此时针对CWD调用chdir就可以不断地向父目录移动，经过有限次“../”到达真正的root目录；
 3. 最终调用chroot(.)，就将沙箱的root恢复到系统真实的root目录。
 
-![1p0q56.jpg](https://s2.ax1x.com/2020/01/18/1p0q56.jpg)
+![1p0q56.jpg](https://s2.ax1x.com/2020/01/18/1p0q56.jpg){:width="100%"}
 
 概括一下子进程中只需要```mkdir(d); chroot(d); chdir(../../../); chroot(.)```四步，子进程就完成了逃逸，可以访问真实目录下的文件。
 
