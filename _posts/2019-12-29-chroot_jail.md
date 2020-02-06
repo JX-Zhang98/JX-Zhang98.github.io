@@ -8,9 +8,13 @@ tags: chroot sandbox
 
 xnuna2019-awd3 & thuctf2019-固若金汤
 
+
+
 ## chroot者，何也
 
-### /usr/bin/chroot
+通常语境下，chroot有两种意义，分别是linux下命令名和libc函数名
+
+### 1. /usr/bin/chroot
 
 > chroot(1) 
 >
@@ -60,7 +64,7 @@ wget http://ftp.gnu.org/gnu/bash/bash-5.0-beta.tar.gz
 make
 ```
 
-### chroot('path') in libc
+### 2. chroot('path') in libc
 
 > chroot(2) 
 >
@@ -124,7 +128,7 @@ chroot()则与chroot命令一样，直接限定了进程的root目录(rootDir)�
 
 **chroot()需要具有root权限，但题目使用chroot构建沙箱也需要root权限，所以一般可以满足*
 
-Xnuca2019中的[awd3](<https://github.com/JX-Zhang98/MyStudy/tree/master/others/xnuca2019-chroot>)就是这种类型，题目在/tmp/jail中建造沙箱，然后允许上传文件，由沙箱使用execveat系统调用进行执行，可以多次上传但每次执行结束沙箱都会刷新。
+Xnuca2019中的[awd3](<https://github.com/JX-Zhang98/myPwn/tree/master/xnuca2019-chroot>)就是这种类型，题目在/tmp/jail中建造沙箱，然后允许上传文件，由沙箱使用execveat系统调用进行执行，可以多次上传但每次执行结束沙箱都会刷新。
 
 ~~这题目其实感觉出了些瑕疵，虽然构建了沙箱，但是题目本身的CWD没有变，仍然是文件所在位置，导致的结果就是完全不用逃逸，子进程直接访问../../../../../ ... ../../../../../../../flag就可以拿到~~
 
@@ -175,7 +179,7 @@ int main()
 
 3 - ptrace附加其他进程，利用注入shellcode使用其他不在jail的进程实现逃逸。
 
-loading...
+什么时候遇到再补充
 
 **Reference：**
 
