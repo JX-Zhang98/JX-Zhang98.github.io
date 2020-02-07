@@ -248,7 +248,7 @@ sudo apt-get install qemu-user qemu-system
 
       qemu外：gdb远程调试
 
-      ```asm
+      ```
       jx@Dp  ~/Desktop/kernel/qwb2018-core/give2player  gdb ./vmlinux -q
       pwndbg: loaded 179 commands. Type pwndbg [filter] for a list.
       pwndbg: created $rebase, $ida gdb functions (can be used with print/break)
@@ -292,7 +292,7 @@ sudo apt-get install qemu-user qemu-system
 
       此时gdb中只加载了kernel的符号，LKM的符号尚未加载。使用```add-symbol-file core.ko [textaddr]```添加，textaddr的值从```/sys/module/core/sections/.text```获取。
 
-      ```asm
+      ```
       //qemu内：
       / # cat /sys/module/core/sections/.text
       0xffffffffc01f9000
