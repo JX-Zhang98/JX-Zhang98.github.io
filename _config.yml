@@ -28,8 +28,12 @@ user: "JX-Zhang"
 user_email: "jx_zhang98@qq.com"
 
 # Build settings
-# markdown: kramdown
-highlighter: pygments
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  
 gems:
   - jekyll-feed
   - jekyll-paginate
