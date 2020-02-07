@@ -316,7 +316,7 @@ sudo apt-get install qemu-user qemu-system
 
    本章中对kernel pwn所需的一些基本前置知识以及其原理进行了更详细一些的汇总和演示，出现的两个题目也非常”baby“，下一篇中将对更正规一些的kernel题目进行复现。
 
-**References: **
+**References:**
 
 [Linux Kernel Exploitation](https://github.com/bash-c/slides/blob/master/pwn_kernel/13_lecture.pdf)
 
