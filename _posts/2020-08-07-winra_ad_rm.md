@@ -39,19 +39,19 @@ remove advertisements in winrar
 
 可以找到程序中两处对'RarReminder'字符串的引用，顺便在这些指令上下个断点
 
-[![afnmgf.png](https://s1.ax1x.com/2020/08/07/afnmgf.png)](https://imgchr.com/i/afnmgf)
+[![afnmgf.png](https://s1.ax1x.com/2020/08/07/afnmgf.png){:width="85%"}](https://imgchr.com/i/afnmgf)
 
 接下来继续运行(F9)到这两处，分别做进一步分析
 
 首先到达的是107位置的指令，根据上下文可以分析得出，此处指令是对“RARReminder”窗口类进行注册
 
-![](https://s1.ax1x.com/2020/08/07/afKApt.png)
+![](https://s1.ax1x.com/2020/08/07/afKApt.png){:width="85%"}
 
 
 
 继续运行，经过几个跨模块时debuger自动添加的断点后来到5c1处，根据上下文就可以确定是在此处通过*CreateWindowExW*函数，创建了RarReminder类的一个实例，即广告窗口。并且0x7ff6f13d05a2处引用的字符串网址，就是广告得url。
 
-![afQ6Te.png](https://s1.ax1x.com/2020/08/07/afQ6Te.png)
+![afQ6Te.png](https://s1.ax1x.com/2020/08/07/afQ6Te.png){:width="85%"}
 
 通过继续逐步(F8)运行，执行完```call CreateWindowExW```后，确实立刻弹出了广告窗口。
 
@@ -71,7 +71,7 @@ remove advertisements in winrar
 
 在编辑框中全部改为*90*
 
-![aftve1.png](https://s1.ax1x.com/2020/08/07/aftve1.png)
+![aftve1.png](https://s1.ax1x.com/2020/08/07/aftve1.png){:width="85%"}
 
 此时理论上已经完成了任务，将修补之后的文件导出
 
